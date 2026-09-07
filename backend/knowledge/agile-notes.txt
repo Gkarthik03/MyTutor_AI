@@ -1,0 +1,76 @@
+AGILE - SOFTWARE DEVELOPMENT
+
+Agile is a software development approach that focuses on
+iterative development, continuous feedback, collaboration,
+and delivering working software frequently.
+
+Agile allows teams to respond to changing requirements and
+customer feedback throughout the development process.
+
+SCRUM
+
+Scrum is a popular Agile framework used to manage software
+development projects.
+
+SPRINT
+
+A Sprint is a fixed period during which a team works on a
+selected set of tasks and delivers a usable increment of the
+product.
+
+A Sprint commonly lasts between one and four weeks.
+
+PRODUCT BACKLOG
+
+The Product Backlog is a prioritized list of features,
+requirements, improvements, and bug fixes that may be needed
+in the product.
+
+SPRINT BACKLOG
+
+The Sprint Backlog contains the work selected from the Product
+Backlog that the team plans to complete during the current
+Sprint.
+
+USER STORY
+
+A User Story describes a requirement from the user's perspective.
+
+A common format is:
+
+As a user, I want to perform an action so that I can achieve
+a specific goal.
+
+DAILY SCRUM
+
+Daily Scrum is a short daily meeting where team members
+discuss their progress, upcoming work, and any impediments.
+
+SPRINT REVIEW
+
+Sprint Review is conducted at the end of a Sprint to demonstrate
+the completed work and collect feedback from stakeholders.
+
+SPRINT RETROSPECTIVE
+
+Sprint Retrospective is a meeting where the team discusses
+what went well, what could be improved, and what actions should
+be taken in the next Sprint.
+
+DEFINITION OF DONE
+
+Definition of Done is a shared understanding of the conditions
+that must be satisfied for a piece of work to be considered
+complete.
+
+AGILE TESTING
+
+In Agile development, testing is performed continuously
+throughout the development lifecycle rather than being left
+until the end.
+
+Testers work closely with developers and other team members
+to identify defects early and provide continuous feedback.
+
+Agile promotes collaboration, adaptability, continuous
+improvement, and frequent delivery of working software.

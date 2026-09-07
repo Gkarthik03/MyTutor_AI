@@ -1,0 +1,19 @@
+SELENIUM - EXPLICIT WAIT
+
+Explicit wait is used when we want Selenium to wait for a specific
+condition before continuing with test execution.
+
+It is useful when a web element does not become available immediately.
+
+Example:
+
+WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+WebElement loginButton = wait.until(
+    ExpectedConditions.elementToBeClickable(By.id("loginButton"))
+);
+
+loginButton.click();
+
+Explicit waits are preferred when the test needs to wait for a
+specific condition rather than using a fixed delay.

@@ -1,0 +1,68 @@
+SQL - BASIC CONCEPTS
+
+SQL stands for Structured Query Language. It is used to
+communicate with relational databases.
+
+SQL can be used to create, read, update, and delete data.
+
+The main SQL operations are commonly represented as CRUD:
+
+CREATE - Used to create database objects or records.
+READ - Used to retrieve data.
+UPDATE - Used to modify existing data.
+DELETE - Used to remove data.
+
+SELECT
+
+The SELECT statement is used to retrieve data from a table.
+
+Example:
+
+SELECT * FROM employees;
+
+This retrieves all columns and rows from the employees table.
+
+WHERE
+
+The WHERE clause is used to filter records based on a condition.
+
+Example:
+
+SELECT * FROM employees
+WHERE department = 'Testing';
+
+This retrieves employees who belong to the Testing department.
+
+JOIN
+
+A JOIN is used to combine data from two or more tables
+based on a related column.
+
+Common types of JOIN are:
+
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+FULL JOIN
+
+Example:
+
+SELECT e.name, d.department_name
+FROM employees e
+INNER JOIN departments d
+ON e.department_id = d.department_id;
+
+PRIMARY KEY
+
+A primary key uniquely identifies each record in a table.
+A primary key cannot contain duplicate values.
+
+FOREIGN KEY
+
+A foreign key is a column that creates a relationship
+between two tables by referring to the primary key of
+another table.
+
+SQL is commonly used in software testing to validate
+database records, verify application data, and check
+whether backend operations produce the expected results.

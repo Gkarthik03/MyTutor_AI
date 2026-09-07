@@ -1,0 +1,12 @@
+package com.mytutor.dto;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
+public record RegisterRequest(
+    @NotBlank String userId,
+    @NotBlank String employeeId,
+    @NotBlank String name,
+    @NotBlank @Email String email,
+    @NotBlank String password
+) {}

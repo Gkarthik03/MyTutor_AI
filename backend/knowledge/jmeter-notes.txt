@@ -1,0 +1,124 @@
+JMETER - PERFORMANCE TESTING
+
+Apache JMeter is an open-source tool used for performance
+testing and load testing of applications.
+
+It can be used to test web applications, REST APIs, databases,
+and other services.
+
+PERFORMANCE TESTING
+
+Performance testing checks how an application behaves under
+different levels of load.
+
+It helps identify issues related to:
+
+- Response time
+- Throughput
+- Resource usage
+- Stability
+- Scalability
+
+LOAD TESTING
+
+Load testing checks how an application performs under an
+expected number of users or requests.
+
+Example:
+
+If an application normally supports 500 users at the same time,
+JMeter can be used to simulate approximately 500 users and
+measure the application's performance.
+
+STRESS TESTING
+
+Stress testing increases the load beyond the expected capacity
+to determine the point at which the application becomes unstable
+or fails.
+
+THREAD GROUP
+
+A Thread Group represents a group of virtual users in JMeter.
+
+Important Thread Group settings include:
+
+- Number of Threads
+- Ramp-Up Period
+- Loop Count
+
+NUMBER OF THREADS
+
+The number of threads represents the number of virtual users
+that JMeter simulates.
+
+Example:
+
+If the number of threads is 100, JMeter can simulate
+100 virtual users.
+
+RAMP-UP PERIOD
+
+Ramp-up period defines how much time JMeter takes to start
+all the configured threads.
+
+Example:
+
+If 100 users have a ramp-up period of 10 seconds, JMeter
+gradually starts the users during those 10 seconds.
+
+SAMPLER
+
+A Sampler sends a request to the application or server.
+
+Common samplers include:
+
+- HTTP Request
+- JDBC Request
+- FTP Request
+
+HTTP REQUEST
+
+The HTTP Request sampler is commonly used to test web
+applications and REST APIs.
+
+It can be configured with:
+
+- Protocol
+- Server name
+- Port
+- HTTP method
+- Path
+- Parameters
+
+LISTENERS
+
+Listeners are used to view and analyze test results.
+
+Examples include:
+
+- View Results Tree
+- Summary Report
+- Aggregate Report
+
+IMPORTANT PERFORMANCE METRICS
+
+Response Time
+
+The amount of time taken by the application to respond
+to a request.
+
+Throughput
+
+The number of requests processed by the application
+during a specific period.
+
+Error Rate
+
+The percentage of requests that fail during the test.
+
+JMeter can help testers identify performance bottlenecks
+and determine whether an application can handle the
+expected workload.
+
+JMeter is commonly used as part of performance testing
+before applications are released to production.

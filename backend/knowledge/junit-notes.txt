@@ -1,0 +1,108 @@
+JUNIT - UNIT TESTING
+
+JUnit is a popular testing framework for Java applications.
+It is mainly used to write and execute unit tests.
+
+UNIT TESTING
+
+Unit testing is the process of testing individual units or
+components of an application in isolation.
+
+A unit can be a method, class, or small piece of functionality.
+
+JUnit helps developers verify that individual methods and
+components behave as expected.
+
+COMMON JUNIT ANNOTATIONS
+
+@Test
+
+The @Test annotation identifies a method as a test method.
+
+Example:
+
+@Test
+void testAddition() {
+    assertEquals(5, calculator.add(2, 3));
+}
+
+@BeforeEach
+
+The @BeforeEach annotation is executed before every test method.
+It is commonly used for test setup.
+
+@AfterEach
+
+The @AfterEach annotation is executed after every test method.
+It can be used for cleanup operations.
+
+@BeforeAll
+
+The @BeforeAll annotation is executed once before all test
+methods in a test class.
+
+@AfterAll
+
+The @AfterAll annotation is executed once after all test
+methods have completed.
+
+ASSERTIONS
+
+Assertions are used to verify whether the actual result matches
+the expected result.
+
+Common assertions include:
+
+assertEquals()
+Checks whether two values are equal.
+
+assertNotEquals()
+Checks whether two values are different.
+
+assertTrue()
+Checks whether a condition is true.
+
+assertFalse()
+Checks whether a condition is false.
+
+assertNull()
+Checks whether a value is null.
+
+assertNotNull()
+Checks whether a value is not null.
+
+Example:
+
+assertEquals(10, result);
+
+This verifies that the result is equal to 10.
+
+TEST LIFECYCLE
+
+A typical JUnit test lifecycle includes:
+
+1. Test setup
+2. Test execution
+3. Result verification
+4. Test cleanup
+
+UNIT TEST EXAMPLE
+
+class CalculatorTest {
+
+    @Test
+    void testAddition() {
+        Calculator calculator = new Calculator();
+
+        int result = calculator.add(2, 3);
+
+        assertEquals(5, result);
+    }
+}
+
+JUnit tests are useful because they help detect defects early,
+support regression testing, and improve the reliability of
+Java applications.
+
+JUnit is commonly used with build tools such as Maven and
+Gradle and can also be integrated into CI/CD pipelines.

@@ -1,0 +1,27 @@
+API TESTING
+
+API testing is used to verify the functionality, reliability,
+performance, and security of application programming interfaces.
+
+Common HTTP methods include:
+
+GET - retrieves data from a server.
+POST - creates new data.
+PUT - updates existing data.
+DELETE - removes data.
+
+Important things to validate in API testing include:
+
+- HTTP status code
+- Response body
+- Response headers
+- Response time
+- Request parameters
+- Authentication
+
+Example:
+
+A GET request can be used to retrieve employee details.
+
+The response should be validated for the expected status code,
+response structure, and required fields.

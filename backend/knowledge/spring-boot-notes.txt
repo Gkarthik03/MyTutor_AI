@@ -1,0 +1,160 @@
+SPRING BOOT - BASICS
+
+Spring Boot is a framework built on top of the Spring Framework
+that makes it easier to create and run Java applications.
+
+It reduces configuration and provides features that help
+developers build production-ready applications quickly.
+
+SPRING FRAMEWORK VS SPRING BOOT
+
+Spring Framework provides the core features for building
+Java applications.
+
+Spring Boot simplifies Spring application development by
+providing auto-configuration, starter dependencies, and
+embedded servers.
+
+DEPENDENCY INJECTION
+
+Dependency Injection is a design principle where the required
+dependencies of a class are provided by the Spring container
+instead of the class creating them directly.
+
+Example:
+
+@Service
+class UserService {
+
+    private final UserRepository repository;
+
+    UserService(UserRepository repository) {
+        this.repository = repository;
+    }
+}
+
+Here, Spring injects UserRepository into UserService.
+
+INVERSION OF CONTROL
+
+Inversion of Control means that the Spring container manages
+the creation and lifecycle of application objects instead of
+the developer creating and managing them manually.
+
+BEANS
+
+A Bean is an object that is created and managed by the
+Spring IoC container.
+
+Common annotations used to create beans include:
+
+@Component
+@Service
+@Repository
+@Controller
+
+@SpringBootApplication
+
+@SpringBootApplication is the main annotation used in a
+Spring Boot application.
+
+It combines three important features:
+
+@Configuration
+@EnableAutoConfiguration
+@ComponentScan
+
+Example:
+
+@SpringBootApplication
+public class Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+
+REST API
+
+Spring Boot can be used to create REST APIs.
+
+Common HTTP methods include:
+
+GET
+Used to retrieve data.
+
+POST
+Used to create data.
+
+PUT
+Used to update data.
+
+DELETE
+Used to delete data.
+
+REST CONTROLLER
+
+The @RestController annotation is used to create a controller
+that handles REST API requests.
+
+Example:
+
+@RestController
+@RequestMapping("/users")
+class UserController {
+
+    @GetMapping
+    public String getUsers() {
+        return "User list";
+    }
+}
+
+COMMON SPRING BOOT ANNOTATIONS
+
+@SpringBootApplication
+Marks the main Spring Boot application class.
+
+@RestController
+Creates a REST controller.
+
+@RequestMapping
+Maps HTTP requests to a controller or method.
+
+@GetMapping
+Handles HTTP GET requests.
+
+@PostMapping
+Handles HTTP POST requests.
+
+@Service
+Marks a class as a service component.
+
+@Repository
+Marks a class as a repository component.
+
+@Autowired
+Can be used for dependency injection.
+
+APPLICATION.PROPERTIES
+
+Spring Boot commonly uses application.properties or
+application.yml to configure the application.
+
+Examples of configuration include:
+
+Database connection
+Server port
+Logging
+Application-specific properties
+
+Example:
+
+server.port=8080
+
+Spring Boot applications can use embedded servers such as
+Tomcat, allowing the application to run without separately
+installing a web server.
+
+Spring Boot is widely used for developing REST APIs,
+web applications, microservices, and backend services.
+Loading...

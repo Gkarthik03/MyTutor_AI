@@ -1,0 +1,86 @@
+CUCUMBER - BDD AND GHERKIN
+
+Cucumber is a testing framework commonly used for Behavior-Driven
+Development (BDD). It allows application behavior to be described
+in a simple language that can be understood by both technical and
+non-technical team members.
+
+BDD
+
+Behavior-Driven Development focuses on describing the expected
+behavior of an application from the user's perspective.
+
+Cucumber commonly uses Gherkin language to write test scenarios.
+
+GHERKIN
+
+Gherkin uses keywords such as:
+
+Feature
+Scenario
+Given
+When
+Then
+And
+But
+
+FEATURE
+
+The Feature keyword describes the functionality being tested.
+
+Example:
+
+Feature: Login functionality
+
+SCENARIO
+
+A Scenario describes a specific behavior or test case.
+
+Example:
+
+Scenario: Successful login
+
+Given
+
+Given describes the initial condition or setup.
+
+Example:
+
+Given the user is on the login page
+
+WHEN
+
+When describes the action performed by the user.
+
+Example:
+
+When the user enters valid username and password
+
+THEN
+
+Then describes the expected result.
+
+Example:
+
+Then the user should be redirected to the home page
+
+A complete scenario can be written as:
+
+Feature: Login functionality
+
+Scenario: Successful login
+Given the user is on the login page
+When the user enters valid username and password
+Then the user should be redirected to the home page
+
+STEP DEFINITIONS
+
+Step definitions contain the actual automation code that executes
+the steps written in a Gherkin feature file.
+
+Cucumber helps improve communication between developers, testers,
+business analysts, and other stakeholders by using readable
+test scenarios.
+
+Cucumber is commonly used together with Selenium for web
+automation testing.
