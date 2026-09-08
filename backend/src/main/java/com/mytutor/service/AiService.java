@@ -54,12 +54,52 @@ public class AiService {
         String json=client.post().uri(ollamaUrl).contentType(MediaType.APPLICATION_JSON).body(body).retrieve().body(String.class);
         return mapper.readTree(json).path("message").path("content").asText("");
     }
-    private String gemini(String text)throws Exception{
-        String url="https://generativelanguage.googleapis.com/v1beta/models/"+geminiModel+":generateContent?key="+geminiKey;
-        Map<String,Object> body=Map.of("contents",List.of(Map.of("parts",List.of(Map.of("text",text)))));
-        String json=client.post().uri(url).contentType(MediaType.APPLICATION_JSON).body(body).retrieve().body(String.class);
-        JsonNode n=mapper.readTree(json);
-        return n.path("candidates").path(0).path("content").path("parts").path(0).path("text").asText("");
+    private String gemini(String text) throws Exception {
+
+        System.out.println("Provider: " + provider);
+        System.out.println("Gemini key loaded: " + !geminiKey.isBlank());
+
+        if (!geminiKey.isBlank()) {
+            System.out.println("Gemini key prefix: "
+                    + geminiKey.substring(0, Math.min(6, geminiKey.length())));
+            System.out.println("Gemini key length: " + geminiKey.length());
+        }
+
+        String url =
+                "https://generativelanguage.googleapis.com/v1beta/models/"
+                        + geminiModel
+                        + ":generateContent?key="
+                        + geminiKey;
+
+        Map<String, Object> body = Map.of(
+                "contents",
+                List.of(
+                        Map.of(
+                                "parts",
+                                List.of(
+                                        Map.of("text", text)
+                                )
+                        )
+                )
+        );
+
+        String json = client.post()
+                .uri(url)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(body)
+                .retrieve()
+                .body(String.class);
+
+        JsonNode n = mapper.readTree(json);
+
+        return n.path("candidates")
+                .path(0)
+                .path("content")
+                .path("parts")
+                .path(0)
+                .path("text")
+                .asText("");
     }
+
 
 }

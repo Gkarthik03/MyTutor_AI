@@ -21,10 +21,20 @@ public class KnowledgeService {
     public record Result(String topic,String source,String content){}
     public Optional<Result> retrieve(String prompt,String technology,String framework){
         String q=(prompt+" "+Objects.toString(technology,"")+" "+Objects.toString(framework,"")).toLowerCase();
+//        System.out.println("PROMPT = " + prompt);
+//        System.out.println("QUERY = " + q);
+//        System.out.println("TOPICS = " +
+//                topics.findAll().stream()
+//                        .map(Topic::getTopicName)
+//                        .toList());
         Topic best=topics.findAll().stream()
             .filter(t->q.contains(t.getTopicName().toLowerCase()))
             .findFirst().orElse(null);
-        if(best==null)return Optional.empty();
+        if(best==null){
+            System.out.println("Empty file");
+            return Optional.empty();
+        }
+
         List<KnowledgeRepository> rs=docs.findByTopic_TopicId(best.getTopicId());
         String content=rs.stream().map(this::read).filter(s->!s.isBlank()).collect(Collectors.joining("\n\n--- SOURCE ---\n\n"));
         if(content.isBlank())return Optional.empty();
