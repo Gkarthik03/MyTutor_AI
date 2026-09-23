@@ -25,7 +25,7 @@ export interface GenerateResponse {
 
 @Injectable({ providedIn: 'root' })
 export class Api {
-  readonly base = 'https://brilliant-balance-production.up.railway.app/';
+  readonly base = 'https://brilliant-balance-production.up.railway.app/api';
   constructor(public http: HttpClient) {}
 }
 
