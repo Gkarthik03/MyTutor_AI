@@ -53,6 +53,10 @@ public class KnowledgeService {
                 try(var pdf=Loader.loadPDF(p.toFile())){return new PDFTextStripper().getText(pdf);}
             }
             return Files.readString(p,StandardCharsets.UTF_8);
-        }catch(Exception e){return "";}
+        }catch(Exception e){
+            System.out.println("File Read Error = "+e.getClass().getName());
+            System.out.println("File Read Message = "+e.getMessage());
+            e.printStackTrace();
+            return "";}
     }
 }
